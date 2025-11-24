@@ -10,7 +10,7 @@ These scripts automatically generate multiple randomized quiz files and answer k
 
 The intended use case is educational: teachers can generate many different quiz versions so students cannot share answers easily.
 
-## Script 1: The Original Version (`randomQuizGenerator.py`)
+## Script 1: The Original Version [`randomQuizGenerator.py`](https://github.com/tamunoWoks/random_quiz_generator/blob/main/randomQuizGenerator.py)
 ### Purpose:
 The original script is a single-file procedural program that:
 - Creates **35 quizzes**, each with **50 questions**.
