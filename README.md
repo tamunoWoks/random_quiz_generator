@@ -140,3 +140,6 @@ Each `quiz_n_answers.txt` contains the answer key.
 | Answer key correctness | ✔️ | ✔️ |
 | Output organization | ❌ | ✔️ (uses folder) |
 | Type hints | ❌ | ✔️ |
+
+### Summary:
+Both scripts accomplish the same task, but the improved version is more suitable for real-world use, classroom distribution, or expansion into a larger project.  
