@@ -55,3 +55,26 @@ def write_answer_key(answer_path: Path, states: List[str], all_capitals: List[st
             options = get_answer_options(correct, all_capitals)
             answer_letter = "ABCD"[options.index(correct)]
             f.write(f"{i}. {answer_letter}\n")
+
+def generate_quizzes(num_quizzes: int = 35):
+    # Generate quizzes and answer keys.
+    OUTPUT_DIR.mkdir(exist_ok=True)
+    all_states = list(CAPITALS.keys())
+    all_capitals = list(CAPITALS.values())
+
+    for n in range(1, num_quizzes + 1):
+        # Shuffle states for each quiz
+        states = all_states.copy()
+        random.shuffle(states)
+
+        quiz_path = OUTPUT_DIR / f"quiz_{n}.txt"
+        answer_path = OUTPUT_DIR / f"quiz_{n}_answers.txt"
+
+        write_quiz(quiz_path, states, all_capitals)
+        write_answer_key(answer_path, states, all_capitals)
+
+    print(f"Generated {num_quizzes} quizzes in: {OUTPUT_DIR.resolve()}")
+
+
+if __name__ == "__main__":
+    generate_quizzes()
