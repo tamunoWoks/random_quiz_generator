@@ -129,3 +129,14 @@ quizzes/
 ```
 Each `quiz_n.txt` contains 50 questions.  
 Each `quiz_n_answers.txt` contains the answer key.
+
+## Comparison Table
+| Feature | Original Script | Improved Script |
+|--------|-----------------|------------------|
+| Modular design | ❌ | ✔️ |
+| Uses pathlib | ❌ | ✔️ |
+| Uses context managers | ❌ | ✔️ |
+| Scalable and maintainable | ⚠️ | ✔️ |
+| Answer key correctness | ✔️ | ✔️ |
+| Output organization | ❌ | ✔️ (uses folder) |
+| Type hints | ❌ | ✔️ |
