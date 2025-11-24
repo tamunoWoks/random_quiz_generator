@@ -24,3 +24,10 @@ CAPITALS: Dict[str, str] = {
 }
 
 OUTPUT_DIR = Path("quizzes")
+
+def get_answer_options(correct: str, all_capitals: List[str]) -> List[str]:
+    # Return 4 answer options with 1 correct + 3 random wrong answers.
+    wrong_answers = random.sample([c for c in all_capitals if c != correct], 3)
+    options = wrong_answers + [correct]
+    random.shuffle(options)
+    return options
