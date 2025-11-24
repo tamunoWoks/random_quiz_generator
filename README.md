@@ -18,3 +18,42 @@ The original script is a single-file procedural program that:
 - Generates 4 answer options for each question (1 correct + 3 wrong).
 - Randomizes the option order.
 - Creates matching answer key files.
+
+### How It Works:
+#### 1. Imports and Data Setup
+The script imports `random` for shuffling and defines a large dictionary mapping states to capitals.
+
+#### 2. Loop Over Quiz Count
+A `for` loop runs 35 times, creating one quiz and one answer key per iteration.
+
+#### 3. File Creation
+For each quiz number:
+- A quiz file named `capitalsquiz<n>.txt` is created.
+- An answer key file named `capitalsquiz_answers<n>.txt` is created.
+
+#### 4. Quiz Header
+Each quiz starts with placeholders:
+```
+Name:
+
+Date:
+
+Period:
+```
+Followed by a centered quiz title.
+
+#### 5. Randomizing Questions
+The list of states is shuffled so each quiz has the questions in a different order.
+
+#### 6. Creating Each Question
+For each state:
+- The correct capital is extracted.
+- A list of all capitals is copied.
+- The correct capital is removed.
+- Three random wrong answers are selected.
+- All four options are shuffled.
+- The question and choices are written to the quiz file.
+- The answer key file records the correct letter.
+
+#### 7. Closing Files
+Files are closed manually after writing.
