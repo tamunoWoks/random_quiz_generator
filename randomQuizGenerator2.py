@@ -31,3 +31,18 @@ def get_answer_options(correct: str, all_capitals: List[str]) -> List[str]:
     options = wrong_answers + [correct]
     random.shuffle(options)
     return options
+
+def write_quiz(quiz_path: Path, states: List[str], all_capitals: List[str]):
+    # Write one quiz file.
+    with quiz_path.open('w', encoding='utf-8') as f:
+        f.write("Name:\n\nDate:\n\nPeriod:\n\n")
+        f.write(f"{' ' * 20}State Capitals Quiz ({quiz_path.stem})\n\n")
+
+        for i, state in enumerate(states, start=1):
+            correct = CAPITALS[state]
+            options = get_answer_options(correct, all_capitals)
+
+            f.write(f"{i}. What is the capital of {state}?\n")
+            for letter, option in zip("ABCD", options):
+                f.write(f"    {letter}. {option}\n")
+            f.write("\n")
