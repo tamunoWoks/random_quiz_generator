@@ -80,3 +80,12 @@ This version rewrites the entire script to make it:
 - Easier to maintain
 - More scalable
 - More professional
+
+### Key Improvements:
+- Uses **functions** to separate logic.
+- Uses **pathlib** for file paths.
+- Uses **with open()** for automatic file handling.
+- Ensures answer options are generated consistently.
+- Supports easy modification (e.g., change number of quizzes).
+- Stores output in a dedicated `quizzes/` directory.
+- Adds **type hints** to improve clarity.
