@@ -89,3 +89,29 @@ This version rewrites the entire script to make it:
 - Supports easy modification (e.g., change number of quizzes).
 - Stores output in a dedicated `quizzes/` directory.
 - Adds **type hints** to improve clarity.
+
+### How the Improved Version Works:
+### 1. Constants and Setup
+- `CAPITALS` dictionary contains all state-capital pairs.
+- `OUTPUT_DIR` defines where quizzes will be saved.
+
+### 2. `get_answer_options()`
+Returns a list of four answer options (three wrong + one correct) in random order.
+
+### 3. `write_quiz()`
+Handles writing:
+- The quiz header
+- All 50 questions
+- The A–D answer choices
+
+### 4. `write_answer_key()`
+Writes the answer key with correct letters corresponding to the quiz.
+
+### 5. `generate_quizzes()`
+Coordinates the creation of all quizzes and answer keys by:
+- Creating the output directory
+- Shuffling the state list for each quiz
+- Calling the helper functions to produce each file
+
+### 6. `if __name__ == "__main__":`
+Allows the script to be run directly.
