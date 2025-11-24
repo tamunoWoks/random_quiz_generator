@@ -70,3 +70,13 @@ Files are closed manually after writing.
 - Output directory clutter.
 - Minimal separation of concerns.
 ---
+
+# 🐍 Script 2: Improved & Pythonic Version (`randomQuizGenerator2.py`)
+### Purpose:
+This version rewrites the entire script to make it:
+- Cleaner
+- More modular
+- Easier to read
+- Easier to maintain
+- More scalable
+- More professional
