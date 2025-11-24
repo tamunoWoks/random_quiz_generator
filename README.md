@@ -71,7 +71,7 @@ Files are closed manually after writing.
 - Minimal separation of concerns.
 ---
 
-# 🐍 Script 2: Improved & Pythonic Version (`randomQuizGenerator2.py`)
+## Script 2: Improved & Pythonic Version (`randomQuizGenerator2.py`)
 ### Purpose:
 This version rewrites the entire script to make it:
 - Cleaner
