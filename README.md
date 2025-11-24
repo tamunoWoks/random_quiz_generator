@@ -115,3 +115,17 @@ Coordinates the creation of all quizzes and answer keys by:
 
 #### 6. `if __name__ == "__main__":`
 Allows the script to be run directly.
+
+### File Output Structure:
+```
+quizzes/
+│
+├── quiz_1.txt
+├── quiz_1_answers.txt
+├── quiz_2.txt
+├── quiz_2_answers.txt
+├── ...
+└── quiz_35_answers.txt
+```
+Each `quiz_n.txt` contains 50 questions.
+Each `quiz_n_answers.txt` contains the answer key.
