@@ -57,3 +57,16 @@ For each state:
 
 #### 7. Closing Files
 Files are closed manually after writing.
+
+### Strengths
+- Simple and easy to understand.
+- Achieves the goal effectively.
+
+### Limitations
+- Manual file handling instead of using context managers.
+- Some repetitive logic.
+- Harder to maintain or extend.
+- Less modular.
+- Output directory clutter.
+- Minimal separation of concerns.
+---
