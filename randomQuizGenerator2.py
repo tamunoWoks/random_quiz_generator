@@ -46,3 +46,12 @@ def write_quiz(quiz_path: Path, states: List[str], all_capitals: List[str]):
             for letter, option in zip("ABCD", options):
                 f.write(f"    {letter}. {option}\n")
             f.write("\n")
+
+def write_answer_key(answer_path: Path, states: List[str], all_capitals: List[str]):
+    # Write corresponding answer key.
+    with answer_path.open('w', encoding='utf-8') as f:
+        for i, state in enumerate(states, start=1):
+            correct = CAPITALS[state]
+            options = get_answer_options(correct, all_capitals)
+            answer_letter = "ABCD"[options.index(correct)]
+            f.write(f"{i}. {answer_letter}\n")
